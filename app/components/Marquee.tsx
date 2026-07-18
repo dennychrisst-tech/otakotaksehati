@@ -4,7 +4,15 @@ export default function Marquee() {
   const items = [...TICKER_ITEMS, ...TICKER_ITEMS];
 
   return (
-    <div className="overflow-hidden border-y border-gold-light/30 bg-forest-dark py-3">
+    <div
+      className="overflow-hidden border-y border-gold-light/30 bg-forest-dark py-3"
+      style={{
+        maskImage:
+          "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+        WebkitMaskImage:
+          "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+      }}
+    >
       <div className="marquee-track flex w-max gap-10 whitespace-nowrap">
         {[...items, ...items].map((item, i) => (
           <span
