@@ -70,7 +70,7 @@ export const ABOUT = {
     { value: 5, suffix: "+", label: "Tahun Berkarya" },
     { value: 1000, suffix: "+", label: "Pelanggan Puas" },
     { value: 100, suffix: "%", label: "Ikan Tenggiri Asli" },
-    { value: 0, suffix: "", label: "Bahan Pengawet" },
+    { display: "0%", label: "Pengawet & Boraks" },
   ],
 } as const;
 
@@ -123,6 +123,8 @@ export const MENU_ITEMS = [
     price: "Rp 100.000",
     unit: "/ pack isi 10",
     category: "otak-otak",
+    qty: "10",
+    imagePosition: "center 30%",
   },
   {
     name: "Otak-Otak Isi 20",
@@ -131,6 +133,8 @@ export const MENU_ITEMS = [
     unit: "/ pack isi 20",
     category: "otak-otak",
     featured: true,
+    qty: "20",
+    imagePosition: "center center",
   },
   {
     name: "Otak-Otak Family Pack",
@@ -138,6 +142,8 @@ export const MENU_ITEMS = [
     price: "Rp 300.000 – Rp 500.000",
     unit: "/ pack isi 30–50",
     category: "otak-otak",
+    qty: "30+",
+    imagePosition: "center 70%",
   },
   {
     name: "Puding Isi 5",
@@ -145,6 +151,8 @@ export const MENU_ITEMS = [
     price: "Rp 185.000",
     unit: "/ pack isi 5",
     category: "puding",
+    qty: "5",
+    imagePosition: "left center",
   },
   {
     name: "Puding Isi 10",
@@ -152,6 +160,8 @@ export const MENU_ITEMS = [
     price: "Rp 365.000",
     unit: "/ pack isi 10",
     category: "puding",
+    qty: "10",
+    imagePosition: "right center",
   },
 ] as const;
 
@@ -204,9 +214,42 @@ export const FAQ_ITEMS = [
       "Pilih menu, chat kami via WhatsApp dengan detail pesanan, kami konfirmasi & kirim info pembayaran, lalu pesanan segar dikemas dan dikirim ke Anda.",
   },
   {
+    question: "Kemana saja area pengiriman tersedia?",
+    answer:
+      "Kami hanya menggunakan pengiriman one day service agar kualitas, rasa, dan kesegaran produk tetap terjaga. Dalam Kota Jakarta & sekitarnya: via Grab dan Gojek. Luar Kota Jakarta: via ekspedisi PAXEL dengan jangkauan Bogor, Depok, Tangerang, Bekasi, Cikarang, Cimahi, Bandung, Cirebon, Tasikmalaya, Purwokerto, Yogyakarta, Magelang, Solo, Semarang, Ngawi, Sidoarjo, Jember, Madiun, Kediri, Surabaya, Malang, Banyuwangi, Denpasar, Makassar, dan Medan. Ongkos kirim dihitung sesuai jarak/ekspedisi dan ditanggung pembeli.",
+  },
+  {
+    question: "Metode pembayaran apa saja yang diterima?",
+    answer:
+      "Kami menerima transfer bank serta e-wallet/QRIS (GoPay, OVO, Dana, ShopeePay). Info rekening & QRIS dikirim setelah pesanan dikonfirmasi via WhatsApp.",
+  },
+  {
     question: "Apakah tersedia paket hampers untuk hari raya?",
     answer:
       "Ya, kami punya paket hampers khusus untuk Natal, Imlek, dan Lebaran — kemasan eksklusif, cocok untuk hadiah maupun suguhan keluarga.",
+  },
+] as const;
+
+export const DELIVERY_INFO = [
+  {
+    icon: "clock",
+    title: "One Day Service",
+    description: "Dikirim di hari yang sama demi menjaga kesegaran & kualitas rasa",
+  },
+  {
+    icon: "map",
+    title: "Dalam Kota Jakarta",
+    description: "Via Grab & Gojek, khusus Jakarta & sekitarnya",
+  },
+  {
+    icon: "truck",
+    title: "Luar Kota Jakarta",
+    description: "Via ekspedisi PAXEL, jangkauan 25+ kota se-Indonesia",
+  },
+  {
+    icon: "wallet",
+    title: "Pembayaran",
+    description: "Transfer Bank & E-wallet/QRIS (GoPay, OVO, Dana, ShopeePay)",
   },
 ] as const;
 

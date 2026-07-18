@@ -85,7 +85,7 @@ export default function Hero() {
           <a
             href="#tentang"
             aria-label="Scroll ke bawah"
-            className="mt-2 flex flex-col items-center gap-1 text-cream/50 transition-colors hover:text-gold-light"
+            className="mt-2 flex flex-col items-center gap-1 text-cream/60 transition-colors hover:text-gold-light"
           >
             <span className="text-[10px] uppercase tracking-[0.3em]">
               Scroll

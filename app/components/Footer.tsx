@@ -35,7 +35,7 @@ export default function Footer() {
           </span>
         </div>
 
-        <p className="max-w-sm text-sm text-cream/50">
+        <p className="max-w-sm text-sm text-cream/60">
           Otak-otak ikan tenggiri asli, dibuat dengan sepenuh hati.
         </p>
 
@@ -74,7 +74,7 @@ export default function Footer() {
           ))}
         </div>
 
-        <p className="text-xs text-cream/40">
+        <p className="text-xs text-cream/55">
           WhatsApp: +{WHATSAPP_NUMBER} &middot; &copy;{" "}
           {new Date().getFullYear()} Otak-Otak Sehati. Semua hak dilindungi.
         </p>

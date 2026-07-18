@@ -43,7 +43,11 @@ export default function About() {
               {ABOUT.stats.map((stat) => (
                 <div key={stat.label}>
                   <p className="font-serif text-3xl font-semibold text-forest">
-                    <Counter value={stat.value} suffix={stat.suffix} />
+                    {"display" in stat ? (
+                      stat.display
+                    ) : (
+                      <Counter value={stat.value} suffix={stat.suffix} />
+                    )}
                   </p>
                   <p className="mt-1 text-xs leading-snug text-foreground/60">
                     {stat.label}

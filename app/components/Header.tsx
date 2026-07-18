@@ -37,12 +37,12 @@ export default function Header() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-5 xl:gap-7 lg:flex">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-cream/80 transition-colors hover:text-gold-light"
+              className="whitespace-nowrap text-sm font-medium text-cream/80 transition-colors hover:text-gold-light"
             >
               {link.label}
             </a>
@@ -53,7 +53,7 @@ export default function Header() {
           href={waLink("Halo, saya ingin memesan Otak-Otak Sehati.")}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden whitespace-nowrap rounded-full bg-gradient-to-r from-gold-light to-gold px-5 py-2 text-sm font-semibold text-forest-dark transition-transform hover:scale-105 md:inline-block"
+          className="hidden whitespace-nowrap rounded-full bg-gradient-to-r from-gold-light to-gold px-5 py-2 text-sm font-semibold text-forest-dark transition-transform hover:scale-105 lg:inline-block"
         >
           Pesan via WA
         </a>
@@ -61,7 +61,7 @@ export default function Header() {
         <button
           aria-label="Buka menu"
           onClick={() => setMenuOpen((v) => !v)}
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-gold-light/40 text-cream md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-gold-light/40 text-cream lg:hidden"
         >
           <span className="sr-only">Menu</span>
           {menuOpen ? "✕" : "☰"}
@@ -69,7 +69,7 @@ export default function Header() {
       </div>
 
       {menuOpen && (
-        <div className="border-t border-gold-light/20 bg-forest/98 px-6 py-4 md:hidden">
+        <div className="border-t border-gold-light/20 bg-forest/98 px-6 py-4 lg:hidden">
           <nav className="flex flex-col gap-4">
             {NAV_LINKS.map((link) => (
               <a
