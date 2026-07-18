@@ -10,14 +10,14 @@ export default function About() {
 
       <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-6 lg:grid-cols-2">
         <Reveal className="flex justify-center lg:justify-start">
-          <div className="relative transition-transform duration-500 hover:scale-105">
+          <div className="relative h-[280px] w-[280px] transition-transform duration-500 hover:scale-105 sm:h-[340px] sm:w-[340px]">
             <div className="absolute inset-0 -z-10 rounded-full bg-gold/15 blur-2xl" />
             <Image
-              src="/logo.png"
+              src="/hero/hero-otak-plate.jpg"
               alt="Otak-Otak Sehati"
-              width={340}
-              height={340}
-              className="animate-float-slow rounded-full shadow-[0_0_80px_-15px_rgba(212,175,55,0.5)]"
+              fill
+              sizes="(min-width: 640px) 340px, 280px"
+              className="animate-float-slow rounded-full object-cover shadow-[0_0_80px_-15px_rgba(212,175,55,0.5)]"
             />
           </div>
         </Reveal>
