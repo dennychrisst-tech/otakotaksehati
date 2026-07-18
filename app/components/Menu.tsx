@@ -109,6 +109,9 @@ export default function Menu() {
             <h3 className="font-serif text-xl font-semibold text-gold-light">
               Puding
             </h3>
+            <p className="mt-1 text-xs uppercase tracking-[0.15em] text-cream/50">
+              Silky Fruit Milk Pudding
+            </p>
           </Reveal>
           <div className="mx-auto mt-6 grid max-w-2xl gap-6 sm:grid-cols-2">
             {puding.map((item, i) => (

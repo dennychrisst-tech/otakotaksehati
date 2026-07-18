@@ -148,7 +148,8 @@ export const MENU_ITEMS = [
   },
   {
     name: "Puding Isi 5",
-    description: "Puding lembut sebagai pelengkap manis di setiap hidangan.",
+    description:
+      "Silky fruit milk pudding — lembut menyerupai sutra, dipadukan buah segar pilihan di setiap gigitan.",
     price: "Rp 185.000",
     unit: "/ pack isi 5",
     category: "puding",
@@ -158,7 +159,8 @@ export const MENU_ITEMS = [
   },
   {
     name: "Puding Isi 10",
-    description: "Puding lembut sebagai pelengkap manis di setiap hidangan.",
+    description:
+      "Puding susu silky bertekstur lembut, dilapisi topping buah segar warna-warni — manis pas & menyegarkan.",
     price: "Rp 365.000",
     unit: "/ pack isi 10",
     category: "puding",
