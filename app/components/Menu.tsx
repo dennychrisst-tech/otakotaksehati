@@ -10,6 +10,8 @@ function MenuCard({
   delay: number;
 }) {
   const featured = "featured" in item && item.featured;
+  const hasOwnPhoto = "image" in item && Boolean(item.image);
+  const imageSrc = hasOwnPhoto ? item.image : MENU_CATEGORY_BG[item.category];
 
   return (
     <Reveal delay={delay}>
@@ -20,7 +22,7 @@ function MenuCard({
       >
         <div className="relative aspect-square overflow-hidden bg-forest/40">
           <Image
-            src={MENU_CATEGORY_BG[item.category]}
+            src={imageSrc}
             alt={item.name}
             fill
             sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
@@ -28,12 +30,14 @@ function MenuCard({
             className="object-cover transition-transform duration-700 group-hover:scale-110"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-forest-dark via-forest-dark/15 to-transparent" />
-          <span
-            aria-hidden="true"
-            className="pointer-events-none absolute -bottom-3 right-2 select-none font-serif text-8xl font-bold text-cream/10"
-          >
-            {item.qty}
-          </span>
+          {!hasOwnPhoto && (
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute -bottom-3 right-2 select-none font-serif text-8xl font-bold text-cream/10"
+            >
+              {item.qty}
+            </span>
+          )}
           {featured && (
             <span className="absolute left-4 top-4 rounded-full bg-gold px-3 py-1 text-[11px] font-semibold text-forest-dark">
               Favorit

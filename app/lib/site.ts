@@ -124,7 +124,8 @@ export const MENU_ITEMS = [
     unit: "/ pack isi 10",
     category: "otak-otak",
     qty: "10",
-    imagePosition: "center 30%",
+    imagePosition: "center center",
+    image: "/menu/otak-otak-isi-10.jpg",
   },
   {
     name: "Otak-Otak Isi 20",
@@ -143,7 +144,8 @@ export const MENU_ITEMS = [
     unit: "/ pack isi 30–50",
     category: "otak-otak",
     qty: "30+",
-    imagePosition: "center 70%",
+    imagePosition: "center center",
+    image: "/menu/otak-otak-family-pack.jpg",
   },
   {
     name: "Puding Isi 5",
