@@ -153,7 +153,8 @@ export const MENU_ITEMS = [
     unit: "/ pack isi 5",
     category: "puding",
     qty: "5",
-    imagePosition: "left center",
+    imagePosition: "center center",
+    image: "/menu/puding-isi-5.jpg",
   },
   {
     name: "Puding Isi 10",
