@@ -174,19 +174,19 @@ export const TESTIMONIALS = [
   {
     quote:
       "Rasanya beda banget, gurihnya berasa ikan asli bukan tepung doang. Favorit keluarga tiap minggu!",
-    name: "Ibu Ratna",
+    name: "Ibu Ivana",
     location: "Jakarta Selatan",
   },
   {
     quote:
       "Kemasannya rapi dan higienis, pengirimannya juga cepat. Pasti order lagi!",
-    name: "Pak Dimas",
+    name: "Pak Tommy",
     location: "Tangerang",
   },
   {
     quote:
       "Cocok banget buat oleh-oleh, semua yang cicip pada nanya beli di mana.",
-    name: "Sarah",
+    name: "Pak Ritchie",
     location: "Bekasi",
   },
 ] as const;
