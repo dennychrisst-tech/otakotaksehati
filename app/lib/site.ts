@@ -10,6 +10,19 @@ export function waLink(message: string) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
 
+export const SOCIAL_LINKS = [
+  {
+    label: "Instagram",
+    url: "https://www.instagram.com/sehatiotakotak/",
+    icon: "instagram",
+  },
+  {
+    label: "Shopee",
+    url: "https://id.shp.ee/tMGmx7oA",
+    icon: "shopee",
+  },
+] as const;
+
 export const NAV_LINKS = [
   { href: "#beranda", label: "Beranda" },
   { href: "#tentang", label: "Tentang Kami" },

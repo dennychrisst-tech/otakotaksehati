@@ -1,5 +1,5 @@
 import Reveal from "./Reveal";
-import { ORDER_STEPS, WHATSAPP_NUMBER, waLink } from "@/app/lib/site";
+import { ORDER_STEPS, SOCIAL_LINKS, WHATSAPP_NUMBER, waLink } from "@/app/lib/site";
 
 export default function Ordering() {
   return (
@@ -49,6 +49,25 @@ export default function Ordering() {
               Chat WhatsApp Sekarang
             </a>
             <p className="mt-4 text-xs text-cream/40">+{WHATSAPP_NUMBER}</p>
+
+            <div className="mt-8 flex flex-col items-center gap-3 border-t border-gold-light/15 pt-6">
+              <p className="text-xs uppercase tracking-[0.2em] text-cream/40">
+                Belanja Juga Di
+              </p>
+              <div className="flex flex-wrap items-center justify-center gap-3">
+                {SOCIAL_LINKS.map((social) => (
+                  <a
+                    key={social.label}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-full border border-gold-light/30 px-5 py-2 text-sm font-medium text-cream/80 transition-colors hover:border-gold-light hover:text-gold-light"
+                  >
+                    {social.label}
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
         </Reveal>
       </div>

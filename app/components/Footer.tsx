@@ -1,5 +1,22 @@
 import Image from "next/image";
-import { NAV_LINKS, WHATSAPP_NUMBER } from "@/app/lib/site";
+import { NAV_LINKS, SOCIAL_LINKS, WHATSAPP_NUMBER } from "@/app/lib/site";
+
+const SOCIAL_ICONS: Record<string, React.ReactNode> = {
+  instagram: (
+    <>
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none" />
+    </>
+  ),
+  shopee: (
+    <path
+      d="M6 8h12l-1 12a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L6 8Zm3 0V6a3 3 0 0 1 6 0v2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  ),
+};
 
 export default function Footer() {
   return (
@@ -33,6 +50,29 @@ export default function Footer() {
             </a>
           ))}
         </nav>
+
+        <div className="flex items-center gap-4">
+          {SOCIAL_LINKS.map((social) => (
+            <a
+              key={social.label}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={social.label}
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-gold-light/30 text-cream/70 transition-colors hover:border-gold-light hover:text-gold-light"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={1.6}
+                className="h-5 w-5"
+              >
+                {SOCIAL_ICONS[social.icon]}
+              </svg>
+            </a>
+          ))}
+        </div>
 
         <p className="text-xs text-cream/40">
           WhatsApp: +{WHATSAPP_NUMBER} &middot; &copy;{" "}
