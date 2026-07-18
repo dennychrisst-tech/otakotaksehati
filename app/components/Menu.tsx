@@ -18,7 +18,7 @@ function MenuCard({
           featured ? "border-gold shadow-lg shadow-gold/10" : "border-cream/10"
         }`}
       >
-        <div className="relative aspect-square overflow-hidden">
+        <div className="relative aspect-square overflow-hidden bg-forest/40">
           <Image
             src={MENU_CATEGORY_BG[item.category]}
             alt={item.name}
