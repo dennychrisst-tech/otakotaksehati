@@ -3,11 +3,15 @@ import { BENEFITS } from "@/app/lib/site";
 
 const ICONS: Record<string, React.ReactNode> = {
   fish: (
-    <path
-      d="M4 12c4-5 10-7 15-4-1 2-1 6 0 8-5 3-11 1-15-4Zm15-4 3-2m-3 6 3 2m-9-4h.01"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
+    <>
+      <path
+        d="M3 12c0-3.2 3.2-6 7.2-6 3 0 5.3 1.9 6.3 4.2L21 7v10l-4.5-3.2C15.5 16.1 13.2 18 10.2 18 6.2 18 3 15.2 3 12Z"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path d="M9.5 8.5v7" strokeLinecap="round" />
+      <circle cx="7" cy="10.5" r="0.7" fill="currentColor" stroke="none" />
+    </>
   ),
   shield: (
     <path
@@ -17,11 +21,18 @@ const ICONS: Record<string, React.ReactNode> = {
     />
   ),
   sparkle: (
-    <path
-      d="M12 3v4m0 10v4m9-9h-4M7 12H3m13.5-6.5-2 2m-9 9-2 2m0-13 2 2m9 9 2 2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
+    <>
+      <path
+        d="M12 3c3 4.5 6 8.2 6 11.5a6 6 0 1 1-12 0C6 11.2 9 7.5 12 3Z"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M9.5 15.5a2.5 2.5 0 0 0 2.5 2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </>
   ),
   heart: (
     <path
