@@ -34,15 +34,22 @@ export const metadata: Metadata = {
     description,
     url: "/",
     siteName: "Otak-Otak Sehati",
-    images: [{ url: "/logo.png", width: 800, height: 800, alt: "Otak-Otak Sehati" }],
+    images: [
+      {
+        url: "/hero/hero-otak-plate.jpg",
+        width: 1280,
+        height: 1280,
+        alt: "Otak-Otak Sehati",
+      },
+    ],
     locale: "id_ID",
     type: "website",
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title,
     description,
-    images: ["/logo.png"],
+    images: ["/hero/hero-otak-plate.jpg"],
   },
 };
 

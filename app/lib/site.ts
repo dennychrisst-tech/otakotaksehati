@@ -122,6 +122,7 @@ export const MENU_ITEMS = [
     price: "Rp 100.000",
     unit: "/ pack isi 10",
     category: "otak-otak",
+    featured: true,
     qty: "10",
     imagePosition: "center center",
     image: "/menu/otak-otak-isi-10.jpg",
@@ -132,7 +133,6 @@ export const MENU_ITEMS = [
     price: "Rp 200.000",
     unit: "/ pack isi 20",
     category: "otak-otak",
-    featured: true,
     qty: "20",
     imagePosition: "center center",
   },
@@ -220,7 +220,7 @@ export const FAQ_ITEMS = [
   {
     question: "Kemana saja area pengiriman tersedia?",
     answer:
-      "Kami hanya menggunakan pengiriman one day service agar kualitas, rasa, dan kesegaran produk tetap terjaga. Dalam Kota Jakarta & sekitarnya: via Grab dan Gojek. Luar Kota Jakarta: via ekspedisi PAXEL dengan jangkauan Bogor, Depok, Tangerang, Bekasi, Cikarang, Cimahi, Bandung, Cirebon, Tasikmalaya, Purwokerto, Yogyakarta, Magelang, Solo, Semarang, Ngawi, Sidoarjo, Jember, Madiun, Kediri, Surabaya, Malang, Banyuwangi, Denpasar, Makassar, dan Medan. Ongkos kirim dihitung sesuai jarak/ekspedisi dan ditanggung pembeli.",
+      "Kami hanya melayani one day service agar kesegaran produk tetap terjaga. Dalam Kota Jakarta & sekitarnya lewat Grab/Gojek, sedangkan luar kota lewat ekspedisi PAXEL dengan jangkauan 25+ kota di Jawa, Bali, Sulawesi & Sumatra — termasuk Bandung, Yogyakarta, Semarang, Surabaya, Malang, Denpasar, Makassar, dan Medan. Ongkir dihitung sesuai jarak dan ditanggung pembeli. Chat kami untuk konfirmasi apakah kota Anda termasuk jangkauan.",
   },
   {
     question: "Metode pembayaran apa saja yang diterima?",
