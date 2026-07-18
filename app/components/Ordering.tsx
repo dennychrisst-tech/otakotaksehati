@@ -40,7 +40,7 @@ const DELIVERY_ICONS: Record<string, React.ReactNode> = {
 
 export default function Ordering() {
   return (
-    <section id="pesan" className="bg-forest py-24">
+    <section id="pesan" className="bg-forest py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal className="mx-auto max-w-xl text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-light">
@@ -51,7 +51,7 @@ export default function Ordering() {
           </h2>
         </Reveal>
 
-        <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-8 sm:mt-14 sm:grid-cols-2 lg:grid-cols-4">
           {ORDER_STEPS.map((step, i) => (
             <Reveal key={step.title} delay={i * 120}>
               <div className="relative text-center">
@@ -69,7 +69,7 @@ export default function Ordering() {
           ))}
         </div>
 
-        <div className="mx-auto mt-14 grid max-w-5xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto mt-10 grid max-w-5xl gap-4 sm:mt-14 sm:grid-cols-2 lg:grid-cols-4">
           {DELIVERY_INFO.map((info, i) => (
             <Reveal key={info.title} delay={i * 100}>
               <div className="flex h-full items-start gap-3 rounded-2xl border border-gold-light/15 bg-cream/5 p-5">
@@ -98,7 +98,7 @@ export default function Ordering() {
         </div>
 
         <Reveal delay={300}>
-          <div className="mx-auto mt-10 max-w-2xl rounded-3xl border border-gold-light/30 bg-gradient-to-b from-gold-light/10 to-transparent p-10 text-center">
+          <div className="mx-auto mt-10 max-w-2xl rounded-3xl border border-gold-light/30 bg-gradient-to-b from-gold-light/10 to-transparent p-8 text-center sm:p-10">
             <h3 className="font-serif text-2xl font-semibold text-cream">
               Siap Menikmati Otak-Otak Sehati?
             </h3>

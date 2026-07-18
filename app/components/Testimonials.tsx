@@ -3,7 +3,7 @@ import { TESTIMONIALS } from "@/app/lib/site";
 
 export default function Testimonials() {
   return (
-    <section id="testimoni" className="bg-cream py-24">
+    <section id="testimoni" className="bg-cream py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal className="mx-auto max-w-xl text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
@@ -14,7 +14,7 @@ export default function Testimonials() {
           </h2>
         </Reveal>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mt-10 grid gap-6 sm:mt-14 md:grid-cols-3">
           {TESTIMONIALS.map((t, i) => (
             <Reveal key={t.name} delay={i * 120}>
               <div className="h-full rounded-2xl border border-forest/10 bg-white p-7 shadow-sm">

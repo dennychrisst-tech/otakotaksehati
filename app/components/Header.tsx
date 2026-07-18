@@ -61,7 +61,7 @@ export default function Header() {
         <button
           aria-label="Buka menu"
           onClick={() => setMenuOpen((v) => !v)}
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-gold-light/40 text-cream lg:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-full border border-gold-light/40 text-cream lg:hidden"
         >
           <span className="sr-only">Menu</span>
           {menuOpen ? "✕" : "☰"}
@@ -69,14 +69,14 @@ export default function Header() {
       </div>
 
       {menuOpen && (
-        <div className="border-t border-gold-light/20 bg-forest/98 px-6 py-4 lg:hidden">
-          <nav className="flex flex-col gap-4">
+        <div className="border-t border-gold-light/20 bg-forest/98 px-6 py-2 lg:hidden">
+          <nav className="flex flex-col">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="text-sm font-medium text-cream/85"
+                className="block py-3 text-sm font-medium text-cream/85 active:text-gold-light"
               >
                 {link.label}
               </a>
@@ -85,7 +85,7 @@ export default function Header() {
               href={waLink("Halo, saya ingin memesan Otak-Otak Sehati.")}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 rounded-full bg-gradient-to-r from-gold-light to-gold px-5 py-2 text-center text-sm font-semibold text-forest-dark"
+              className="mb-2 mt-2 rounded-full bg-gradient-to-r from-gold-light to-gold py-3 text-center text-sm font-semibold text-forest-dark"
             >
               Pesan via WA
             </a>

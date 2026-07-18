@@ -34,7 +34,7 @@ const ICONS: Record<string, React.ReactNode> = {
 
 export default function Benefits() {
   return (
-    <section id="keunggulan" className="bg-cream py-24">
+    <section id="keunggulan" className="bg-cream py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal className="mx-auto max-w-xl text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
@@ -49,7 +49,7 @@ export default function Benefits() {
           </p>
         </Reveal>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-6 sm:mt-14 sm:grid-cols-2 lg:grid-cols-4">
           {BENEFITS.map((item, i) => (
             <Reveal key={item.title} delay={i * 100}>
               <div className="group h-full rounded-2xl border border-forest/10 bg-white p-7 shadow-sm transition-all hover:-translate-y-1.5 hover:border-gold/40 hover:shadow-xl hover:shadow-gold/10">

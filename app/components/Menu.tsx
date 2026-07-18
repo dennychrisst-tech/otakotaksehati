@@ -58,7 +58,7 @@ function MenuCard({
             href={waLink(`Halo, saya ingin memesan ${item.name}.`)}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-5 rounded-full border border-gold-light/40 py-2 text-center text-sm font-medium text-cream transition-colors group-hover:border-gold-light group-hover:bg-gold-light/10"
+            className="mt-5 rounded-full border border-gold-light/40 py-3 text-center text-sm font-medium text-cream transition-colors active:bg-gold-light/10 group-hover:border-gold-light group-hover:bg-gold-light/10"
           >
             Pesan
           </a>
@@ -73,7 +73,7 @@ export default function Menu() {
   const puding = MENU_ITEMS.filter((item) => item.category === "puding");
 
   return (
-    <section id="menu" className="bg-forest-dark py-24">
+    <section id="menu" className="bg-forest-dark py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal className="mx-auto max-w-xl text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-light">
@@ -85,7 +85,7 @@ export default function Menu() {
           <p className="mt-4 text-cream/65">{MENU_NOTE}</p>
         </Reveal>
 
-        <div className="mt-14">
+        <div className="mt-10 sm:mt-14">
           <Reveal>
             <h3 className="font-serif text-xl font-semibold text-gold-light">
               Otak-Otak
@@ -98,7 +98,7 @@ export default function Menu() {
           </div>
         </div>
 
-        <div className="mt-16">
+        <div className="mt-12 sm:mt-16">
           <Reveal>
             <h3 className="font-serif text-xl font-semibold text-gold-light">
               Puding

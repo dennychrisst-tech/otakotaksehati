@@ -5,7 +5,7 @@ import { ABOUT } from "@/app/lib/site";
 
 export default function About() {
   return (
-    <section id="tentang" className="relative overflow-hidden bg-cream py-24">
+    <section id="tentang" className="relative overflow-hidden bg-cream py-16 sm:py-24">
       <div className="pointer-events-none absolute -right-40 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-gold/10 blur-3xl" />
 
       <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-6 lg:grid-cols-2">

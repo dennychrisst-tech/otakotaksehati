@@ -3,7 +3,7 @@ import { FAQ_ITEMS } from "@/app/lib/site";
 
 export default function FAQ() {
   return (
-    <section id="faq" className="bg-cream py-24">
+    <section id="faq" className="bg-cream py-16 sm:py-24">
       <div className="mx-auto max-w-3xl px-6">
         <Reveal className="mx-auto max-w-xl text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">

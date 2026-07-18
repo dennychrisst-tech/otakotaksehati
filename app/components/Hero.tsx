@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section
       id="beranda"
-      className="relative isolate overflow-hidden bg-forest-dark pt-28"
+      className="relative isolate overflow-hidden bg-forest-dark pt-24 sm:pt-28"
     >
       <HeroBackground />
 
@@ -16,7 +16,7 @@ export default function Hero() {
       <div className="pointer-events-none absolute -left-32 top-10 h-80 w-80 rounded-full bg-gold/20 blur-3xl" />
       <div className="pointer-events-none absolute -right-24 top-1/3 h-96 w-96 rounded-full bg-gold-light/10 blur-3xl" />
 
-      <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-8 px-6 pb-20 pt-12 text-center">
+      <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-6 px-6 pb-14 pt-10 text-center sm:gap-8 sm:pb-20 sm:pt-12">
         <Reveal>
           <Image
             src="/logo.png"
