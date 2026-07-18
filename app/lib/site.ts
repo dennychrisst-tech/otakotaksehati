@@ -1,4 +1,4 @@
-export const WHATSAPP_NUMBER = "6287867888883";
+export const WHATSAPP_NUMBER = "62859106969857";
 
 export const HERO_IMAGES = [
   "/hero/hero-otak-box.jpg",
