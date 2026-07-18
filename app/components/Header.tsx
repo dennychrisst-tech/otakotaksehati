@@ -87,12 +87,13 @@ export default function Header() {
 
       <div
         aria-hidden={!menuOpen}
-        className={`grid overflow-hidden bg-forest/98 transition-[grid-template-rows,border-color] duration-300 ease-in-out lg:hidden ${
-          menuOpen ? "border-t border-gold-light/20" : "border-t border-transparent"
+        className={`overflow-hidden bg-forest/98 transition-[max-height,border-color] duration-300 ease-in-out lg:hidden ${
+          menuOpen
+            ? "max-h-[32rem] border-t border-gold-light/20"
+            : "max-h-0 border-t border-transparent"
         }`}
-        style={{ gridTemplateRows: menuOpen ? "1fr" : "0fr" }}
       >
-        <nav className="flex min-h-0 flex-col overflow-hidden px-6 py-2">
+        <nav className="flex flex-col px-6 py-2">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}

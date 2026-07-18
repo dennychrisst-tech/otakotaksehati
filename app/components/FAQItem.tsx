@@ -41,14 +41,13 @@ export default function FAQItem({
         </svg>
       </button>
       <div
-        className="grid transition-[grid-template-rows] duration-300 ease-in-out"
-        style={{ gridTemplateRows: open ? "1fr" : "0fr" }}
+        className={`overflow-hidden transition-[max-height] duration-300 ease-in-out ${
+          open ? "max-h-96" : "max-h-0"
+        }`}
       >
-        <div className="overflow-hidden">
-          <p className="pb-4 text-sm leading-relaxed text-foreground/65">
-            {answer}
-          </p>
-        </div>
+        <p className="pb-4 text-sm leading-relaxed text-foreground/65">
+          {answer}
+        </p>
       </div>
     </div>
   );
