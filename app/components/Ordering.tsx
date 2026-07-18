@@ -38,6 +38,8 @@ const DELIVERY_ICONS: Record<string, React.ReactNode> = {
   ),
 };
 
+const SHOPEE_URL = SOCIAL_LINKS.find((s) => s.label === "Shopee")!.url;
+
 export default function Ordering() {
   return (
     <section id="pesan" className="bg-forest py-16 sm:py-24">
@@ -104,15 +106,26 @@ export default function Ordering() {
             </h3>
             <p className="mt-2 text-sm text-cream/65">
               Chat kami sekarang, pesanan Anda kami proses dengan sepenuh hati.
+              Bisa juga langsung pesan via Shopee tanpa chat dulu.
             </p>
-            <a
-              href={waLink("Halo, saya ingin memesan Otak-Otak Sehati.")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-block rounded-full bg-gradient-to-r from-gold-light to-gold px-8 py-3 text-sm font-semibold text-forest-dark shadow-lg shadow-gold/20 transition-transform hover:scale-105"
-            >
-              Chat WhatsApp Sekarang
-            </a>
+            <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
+              <a
+                href={waLink("Halo, saya ingin memesan Otak-Otak Sehati.")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block rounded-full bg-gradient-to-r from-gold-light to-gold px-8 py-3 text-sm font-semibold text-forest-dark shadow-lg shadow-gold/20 transition-transform hover:scale-105"
+              >
+                Chat WhatsApp Sekarang
+              </a>
+              <a
+                href={SHOPEE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block rounded-full border border-gold-light/40 px-8 py-3 text-sm font-semibold text-cream transition-colors hover:border-gold-light hover:text-gold-light"
+              >
+                Pesan via Shopee
+              </a>
+            </div>
             <p className="mt-4 text-xs text-cream/55">+{WHATSAPP_NUMBER}</p>
 
             <div className="mt-8 flex flex-col items-center gap-3 border-t border-gold-light/15 pt-6">
