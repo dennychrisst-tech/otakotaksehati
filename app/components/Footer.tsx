@@ -1,4 +1,5 @@
 import Image from "next/image";
+import LeafBackground from "./LeafBackground";
 import { NAV_LINKS, SOCIAL_LINKS, WHATSAPP_NUMBER } from "@/app/lib/site";
 
 const SOCIAL_ICONS: Record<string, React.ReactNode> = {
@@ -20,8 +21,9 @@ const SOCIAL_ICONS: Record<string, React.ReactNode> = {
 
 export default function Footer() {
   return (
-    <footer className="border-t border-gold-light/10 bg-forest-dark py-12">
-      <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-6 text-center">
+    <footer className="relative isolate overflow-hidden border-t border-gold-light/10 bg-forest-dark py-12">
+      <LeafBackground />
+      <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-6 px-6 text-center">
         <div className="flex items-center gap-3">
           <Image
             src="/logo.png"

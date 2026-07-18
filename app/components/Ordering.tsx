@@ -1,3 +1,4 @@
+import LeafBackground from "./LeafBackground";
 import Reveal from "./Reveal";
 import {
   DELIVERY_INFO,
@@ -42,8 +43,9 @@ const SHOPEE_URL = SOCIAL_LINKS.find((s) => s.label === "Shopee")!.url;
 
 export default function Ordering() {
   return (
-    <section id="pesan" className="bg-forest py-16 sm:py-24">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="pesan" className="relative isolate overflow-hidden bg-forest py-16 sm:py-24">
+      <LeafBackground overlayClassName="bg-forest/60" />
+      <div className="relative mx-auto max-w-6xl px-6">
         <Reveal className="mx-auto max-w-xl text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-light">
             Mudah &amp; Cepat

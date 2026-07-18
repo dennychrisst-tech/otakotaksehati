@@ -1,4 +1,5 @@
 import Image from "next/image";
+import LeafBackground from "./LeafBackground";
 import Reveal from "./Reveal";
 import { MENU_CATEGORY_BG, MENU_ITEMS, MENU_NOTE, waLink } from "@/app/lib/site";
 
@@ -77,8 +78,9 @@ export default function Menu() {
   const puding = MENU_ITEMS.filter((item) => item.category === "puding");
 
   return (
-    <section id="menu" className="bg-forest-dark py-16 sm:py-24">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="menu" className="relative isolate overflow-hidden bg-forest-dark py-16 sm:py-24">
+      <LeafBackground />
+      <div className="relative mx-auto max-w-6xl px-6">
         <Reveal className="mx-auto max-w-xl text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-light">
             Varian &amp; Ukuran
