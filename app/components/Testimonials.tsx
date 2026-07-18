@@ -17,7 +17,7 @@ export default function Testimonials() {
         <div className="mt-10 grid gap-6 sm:mt-14 md:grid-cols-3">
           {TESTIMONIALS.map((t, i) => (
             <Reveal key={t.name} delay={i * 120}>
-              <div className="h-full rounded-2xl border border-forest/10 bg-white p-7 shadow-sm">
+              <div className="h-full rounded-2xl border border-forest/10 bg-white p-7 shadow-sm transition-all hover:-translate-y-1.5 hover:border-gold/40 hover:shadow-xl hover:shadow-gold/10">
                 <div className="flex gap-1 text-gold">
                   {Array.from({ length: 5 }).map((_, s) => (
                     <span key={s}>★</span>

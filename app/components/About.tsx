@@ -10,7 +10,7 @@ export default function About() {
 
       <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-6 lg:grid-cols-2">
         <Reveal className="flex justify-center lg:justify-start">
-          <div className="relative">
+          <div className="relative transition-transform duration-500 hover:scale-105">
             <div className="absolute inset-0 -z-10 rounded-full bg-gold/15 blur-2xl" />
             <Image
               src="/logo.png"

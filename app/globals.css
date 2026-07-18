@@ -27,6 +27,12 @@ body {
   color: var(--foreground);
 }
 
+:focus-visible {
+  outline: 2px solid var(--color-gold-light);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 /* Scroll reveal */
 .reveal {
   opacity: 0;
@@ -113,6 +119,21 @@ body {
   animation: fade-in 1.2s ease both;
 }
 
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.animate-pop-in {
+  animation: pop-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  animation-delay: 1s;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     opacity: 1;
@@ -122,6 +143,7 @@ body {
   .marquee-track,
   .animate-float,
   .animate-float-slow,
+  .animate-pop-in,
   .text-shimmer {
     animation: none;
   }

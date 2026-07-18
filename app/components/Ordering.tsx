@@ -55,28 +55,31 @@ export default function Ordering() {
           </h2>
         </Reveal>
 
-        <div className="mt-10 grid gap-8 sm:mt-14 sm:grid-cols-2 lg:grid-cols-4">
-          {ORDER_STEPS.map((step, i) => (
-            <Reveal key={step.title} delay={i * 120}>
-              <div className="relative text-center">
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-gold-light/50 font-serif text-xl font-semibold text-gold-light">
-                  {i + 1}
+        <div className="relative mt-10 sm:mt-14">
+          <div className="pointer-events-none absolute left-[12.5%] right-[12.5%] top-7 hidden h-px bg-gold-light/20 lg:block" />
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {ORDER_STEPS.map((step, i) => (
+              <Reveal key={step.title} delay={i * 120}>
+                <div className="relative text-center">
+                  <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-gold-light/50 bg-forest font-serif text-xl font-semibold text-gold-light">
+                    {i + 1}
+                  </div>
+                  <h3 className="mt-4 font-serif text-lg font-semibold text-cream">
+                    {step.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-cream/60">
+                    {step.description}
+                  </p>
                 </div>
-                <h3 className="mt-4 font-serif text-lg font-semibold text-cream">
-                  {step.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-cream/60">
-                  {step.description}
-                </p>
-              </div>
-            </Reveal>
-          ))}
+              </Reveal>
+            ))}
+          </div>
         </div>
 
         <div className="mx-auto mt-10 grid max-w-5xl gap-4 sm:mt-14 sm:grid-cols-2 lg:grid-cols-4">
           {DELIVERY_INFO.map((info, i) => (
             <Reveal key={info.title} delay={i * 100}>
-              <div className="flex h-full items-start gap-3 rounded-2xl border border-gold-light/15 bg-cream/5 p-5">
+              <div className="flex h-full items-start gap-3 rounded-2xl border border-gold-light/15 bg-cream/5 p-5 transition-all hover:-translate-y-1 hover:border-gold-light/40 hover:bg-cream/10">
                 <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-gold-light/10 text-gold-light">
                   <svg
                     viewBox="0 0 24 24"
@@ -123,7 +126,7 @@ export default function Ordering() {
                 href={SHOPEE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block rounded-full border border-gold-light/40 px-8 py-3 text-sm font-semibold text-cream transition-colors hover:border-gold-light hover:text-gold-light"
+                className="inline-block rounded-full border border-gold-light/40 px-8 py-3 text-sm font-semibold text-cream transition-all hover:scale-105 hover:border-gold-light hover:text-gold-light"
               >
                 Pesan via Shopee
               </a>
@@ -141,7 +144,7 @@ export default function Ordering() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded-full border border-gold-light/30 px-5 py-2 text-sm font-medium text-cream/80 transition-colors hover:border-gold-light hover:text-gold-light"
+                    className="rounded-full border border-gold-light/30 px-5 py-2 text-sm font-medium text-cream/80 transition-all hover:scale-105 hover:border-gold-light hover:text-gold-light"
                   >
                     {social.label}
                   </a>

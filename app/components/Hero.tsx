@@ -67,19 +67,23 @@ export default function Hero() {
           </div>
         </Reveal>
 
-        <Reveal delay={500}>
-          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 pt-4 text-sm text-cream/70">
+        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 pt-4 text-sm text-cream/70">
+          <Reveal delay={500}>
             <span className="flex items-center gap-2">
               <span className="text-gold-light">✓</span> 100% Ikan Tenggiri Asli
             </span>
+          </Reveal>
+          <Reveal delay={550}>
             <span className="flex items-center gap-2">
               <span className="text-gold-light">✓</span> Tanpa Pengawet
             </span>
+          </Reveal>
+          <Reveal delay={600}>
             <span className="flex items-center gap-2">
               <span className="text-gold-light">✓</span> Higienis Terjamin
             </span>
-          </div>
-        </Reveal>
+          </Reveal>
+        </div>
 
         <Reveal delay={600}>
           <a

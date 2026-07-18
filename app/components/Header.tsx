@@ -60,38 +60,61 @@ export default function Header() {
 
         <button
           aria-label="Buka menu"
+          aria-expanded={menuOpen}
           onClick={() => setMenuOpen((v) => !v)}
-          className="flex h-11 w-11 items-center justify-center rounded-full border border-gold-light/40 text-cream lg:hidden"
+          className="relative flex h-11 w-11 items-center justify-center rounded-full border border-gold-light/40 text-cream lg:hidden"
         >
           <span className="sr-only">Menu</span>
-          {menuOpen ? "✕" : "☰"}
+          <span className="relative block h-3.5 w-5">
+            <span
+              className={`absolute left-0 top-0 h-0.5 w-5 bg-current transition-transform duration-300 ${
+                menuOpen ? "translate-y-[6px] rotate-45" : ""
+              }`}
+            />
+            <span
+              className={`absolute left-0 top-1/2 h-0.5 w-5 -translate-y-1/2 bg-current transition-opacity duration-200 ${
+                menuOpen ? "opacity-0" : "opacity-100"
+              }`}
+            />
+            <span
+              className={`absolute bottom-0 left-0 h-0.5 w-5 bg-current transition-transform duration-300 ${
+                menuOpen ? "-translate-y-[6px] -rotate-45" : ""
+              }`}
+            />
+          </span>
         </button>
       </div>
 
-      {menuOpen && (
-        <div className="border-t border-gold-light/20 bg-forest/98 px-6 py-2 lg:hidden">
-          <nav className="flex flex-col">
-            {NAV_LINKS.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setMenuOpen(false)}
-                className="block py-3 text-sm font-medium text-cream/85 active:text-gold-light"
-              >
-                {link.label}
-              </a>
-            ))}
+      <div
+        aria-hidden={!menuOpen}
+        className={`grid overflow-hidden bg-forest/98 transition-[grid-template-rows,border-color] duration-300 ease-in-out lg:hidden ${
+          menuOpen ? "border-t border-gold-light/20" : "border-t border-transparent"
+        }`}
+        style={{ gridTemplateRows: menuOpen ? "1fr" : "0fr" }}
+      >
+        <nav className="flex min-h-0 flex-col overflow-hidden px-6 py-2">
+          {NAV_LINKS.map((link) => (
             <a
-              href={waLink("Halo, saya ingin memesan Otak-Otak Sehati.")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mb-2 mt-2 rounded-full bg-gradient-to-r from-gold-light to-gold py-3 text-center text-sm font-semibold text-forest-dark"
+              key={link.href}
+              href={link.href}
+              tabIndex={menuOpen ? 0 : -1}
+              onClick={() => setMenuOpen(false)}
+              className="block py-3 text-sm font-medium text-cream/85 active:text-gold-light"
             >
-              Pesan via WA
+              {link.label}
             </a>
-          </nav>
-        </div>
-      )}
+          ))}
+          <a
+            href={waLink("Halo, saya ingin memesan Otak-Otak Sehati.")}
+            target="_blank"
+            rel="noopener noreferrer"
+            tabIndex={menuOpen ? 0 : -1}
+            className="mb-2 mt-2 rounded-full bg-gradient-to-r from-gold-light to-gold py-3 text-center text-sm font-semibold text-forest-dark"
+          >
+            Pesan via WA
+          </a>
+        </nav>
+      </div>
     </header>
   );
 }

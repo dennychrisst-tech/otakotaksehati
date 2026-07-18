@@ -113,7 +113,7 @@ export default function Menu() {
               Silky Fruit Milk Pudding
             </p>
           </Reveal>
-          <div className="mx-auto mt-6 grid max-w-2xl gap-6 sm:grid-cols-2">
+          <div className="mt-6 grid gap-6 sm:grid-cols-2">
             {puding.map((item, i) => (
               <MenuCard key={item.name} item={item} delay={i * 100} />
             ))}

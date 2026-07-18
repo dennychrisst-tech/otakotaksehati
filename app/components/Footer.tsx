@@ -1,5 +1,6 @@
 import Image from "next/image";
 import LeafBackground from "./LeafBackground";
+import Reveal from "./Reveal";
 import { NAV_LINKS, SOCIAL_LINKS, WHATSAPP_NUMBER } from "@/app/lib/site";
 
 const SOCIAL_ICONS: Record<string, React.ReactNode> = {
@@ -24,7 +25,7 @@ export default function Footer() {
     <footer className="relative isolate overflow-hidden border-t border-gold-light/10 bg-forest-dark py-12">
       <LeafBackground />
       <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-6 px-6 text-center">
-        <div className="flex items-center gap-3">
+        <Reveal className="flex items-center gap-3">
           <Image
             src="/logo.png"
             alt="Otak-Otak Sehati"
@@ -35,51 +36,59 @@ export default function Footer() {
           <span className="font-serif text-lg font-semibold text-cream">
             Otak-Otak Sehati
           </span>
-        </div>
+        </Reveal>
 
-        <p className="max-w-sm text-sm text-cream/60">
-          Otak-otak ikan tenggiri asli, dibuat dengan sepenuh hati.
-        </p>
+        <Reveal delay={80}>
+          <p className="max-w-sm text-sm text-cream/60">
+            Otak-otak ikan tenggiri asli, dibuat dengan sepenuh hati.
+          </p>
+        </Reveal>
 
-        <nav className="flex flex-wrap justify-center gap-6">
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-sm text-cream/60 transition-colors hover:text-gold-light"
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
-
-        <div className="flex items-center gap-4">
-          {SOCIAL_LINKS.map((social) => (
-            <a
-              key={social.label}
-              href={social.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={social.label}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-gold-light/30 text-cream/70 transition-colors hover:border-gold-light hover:text-gold-light"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={1.6}
-                className="h-5 w-5"
+        <Reveal delay={160}>
+          <nav className="flex flex-wrap justify-center gap-6">
+            {NAV_LINKS.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-sm text-cream/60 transition-colors hover:text-gold-light"
               >
-                {SOCIAL_ICONS[social.icon]}
-              </svg>
-            </a>
-          ))}
-        </div>
+                {link.label}
+              </a>
+            ))}
+          </nav>
+        </Reveal>
 
-        <p className="text-xs text-cream/55">
-          WhatsApp: +{WHATSAPP_NUMBER} &middot; &copy;{" "}
-          {new Date().getFullYear()} Otak-Otak Sehati. Semua hak dilindungi.
-        </p>
+        <Reveal delay={240}>
+          <div className="flex items-center gap-4">
+            {SOCIAL_LINKS.map((social) => (
+              <a
+                key={social.label}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={social.label}
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-gold-light/30 text-cream/70 transition-all hover:scale-110 hover:border-gold-light hover:text-gold-light"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={1.6}
+                  className="h-5 w-5"
+                >
+                  {SOCIAL_ICONS[social.icon]}
+                </svg>
+              </a>
+            ))}
+          </div>
+        </Reveal>
+
+        <Reveal delay={320}>
+          <p className="text-xs text-cream/55">
+            WhatsApp: +{WHATSAPP_NUMBER} &middot; &copy;{" "}
+            {new Date().getFullYear()} Otak-Otak Sehati. Semua hak dilindungi.
+          </p>
+        </Reveal>
       </div>
     </footer>
   );

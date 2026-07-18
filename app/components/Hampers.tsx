@@ -48,7 +48,7 @@ export default function Hampers() {
                     href={waLink(`Halo, saya ingin menanyakan ${item.title}.`)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-5 inline-block rounded-full border border-forest/15 px-5 py-3 text-sm font-medium text-forest transition-colors active:bg-gold-light/10 group-hover:border-gold group-hover:bg-gold-light/10"
+                    className="mt-5 block w-full rounded-full border border-forest/15 py-3 text-center text-sm font-medium text-forest transition-colors active:bg-gold-light/10 group-hover:border-gold group-hover:bg-gold-light/10"
                   >
                     Tanya Detail
                   </a>
