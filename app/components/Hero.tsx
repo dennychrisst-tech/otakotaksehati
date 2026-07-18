@@ -80,6 +80,31 @@ export default function Hero() {
             </span>
           </div>
         </Reveal>
+
+        <Reveal delay={600}>
+          <a
+            href="#tentang"
+            aria-label="Scroll ke bawah"
+            className="mt-2 flex flex-col items-center gap-1 text-cream/50 transition-colors hover:text-gold-light"
+          >
+            <span className="text-[10px] uppercase tracking-[0.3em]">
+              Scroll
+            </span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={1.6}
+              className="h-5 w-5 animate-bounce motion-reduce:animate-none"
+            >
+              <path
+                d="M6 9l6 6 6-6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </a>
+        </Reveal>
       </div>
 
       <Marquee />

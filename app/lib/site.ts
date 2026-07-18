@@ -31,6 +31,7 @@ export const NAV_LINKS = [
   { href: "#hampers", label: "Hampers" },
   { href: "#testimoni", label: "Testimoni" },
   { href: "#pesan", label: "Cara Pesan" },
+  { href: "#faq", label: "FAQ" },
 ];
 
 export const HAMPERS = [
@@ -173,6 +174,39 @@ export const TESTIMONIALS = [
       "Cocok banget buat oleh-oleh, semua yang cicip pada nanya beli di mana.",
     name: "Sarah",
     location: "Bekasi",
+  },
+] as const;
+
+export const FAQ_ITEMS = [
+  {
+    question: "Apa bahan utama Otak-Otak Sehati?",
+    answer:
+      "100% daging ikan tenggiri segar pilihan, diracik tanpa pengawet maupun boraks — aman dinikmati seluruh keluarga.",
+  },
+  {
+    question: "Berapa minimal pemesanan?",
+    answer:
+      "Harga otak-otak Rp 10.000/pcs dengan pembelian minimal 10 pcs. Untuk puding tersedia paket isi 5 dan isi 10.",
+  },
+  {
+    question: "Bagaimana cara menghangatkan otak-otak?",
+    answer:
+      "Bisa pakai microwave (gunakan wadah tahan panas, panaskan ±1 menit) atau wajan anti lengket (panaskan ±1 menit tiap sisi) hingga siap disajikan.",
+  },
+  {
+    question: "Berapa lama otak-otak bisa disimpan?",
+    answer:
+      "Simpan dalam wadah kedap udara di lemari es tahan 3–4 hari, atau di freezer tahan hingga 1 bulan. Jika akan disimpan lebih dari sehari, wajib masuk lemari es.",
+  },
+  {
+    question: "Bagaimana cara pemesanan?",
+    answer:
+      "Pilih menu, chat kami via WhatsApp dengan detail pesanan, kami konfirmasi & kirim info pembayaran, lalu pesanan segar dikemas dan dikirim ke Anda.",
+  },
+  {
+    question: "Apakah tersedia paket hampers untuk hari raya?",
+    answer:
+      "Ya, kami punya paket hampers khusus untuk Natal, Imlek, dan Lebaran — kemasan eksklusif, cocok untuk hadiah maupun suguhan keluarga.",
   },
 ] as const;
 

@@ -6,7 +6,9 @@ import Menu from "./components/Menu";
 import Hampers from "./components/Hampers";
 import Testimonials from "./components/Testimonials";
 import Ordering from "./components/Ordering";
+import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
+import WhatsAppFloat from "./components/WhatsAppFloat";
 
 export default function Home() {
   return (
@@ -20,8 +22,10 @@ export default function Home() {
         <Hampers />
         <Testimonials />
         <Ordering />
+        <FAQ />
       </main>
       <Footer />
+      <WhatsAppFloat />
     </div>
   );
 }
