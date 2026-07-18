@@ -1,9 +1,8 @@
 export const WHATSAPP_NUMBER = "6287867888883";
 
 export const HERO_IMAGES = [
-  "/hero/hero-1.jpg",
-  "/hero/hero-2.jpg",
-  "/hero/hero-3.jpg",
+  "/hero/hero-otak-box.jpg",
+  "/hero/hero-otak-plate.jpg",
 ];
 
 export function waLink(message: string) {
